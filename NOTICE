@@ -1,0 +1,10 @@
+DSH Team Fishbone
+Copyright (c) 2026 outmanwt
+
+Projection-reading, token/duration formatting and native child-session navigation
+patterns were adapted from DeepSeek Harness built-in sub-agent and Agent Teams
+UI packages, distributed under the MIT License.
+Copyright (c) 2026 DeepSeek
+Upstream: https://github.com/deepseek-ai/deepseek-harness
+
+The MIT permission and warranty text is retained in LICENSE.

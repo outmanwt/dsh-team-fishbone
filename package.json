@@ -1,0 +1,29 @@
+{
+  "name": "@local/dsh-team-fishbone",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Interactive fishbone view for DSH sub-agents, assignments, live status and session navigation.",
+  "license": "MIT",
+  "author": "outmanwt",
+  "repository": { "type": "git", "url": "https://github.com/outmanwt/dsh-team-fishbone.git" },
+  "homepage": "https://github.com/outmanwt/dsh-team-fishbone#readme",
+  "bugs": { "url": "https://github.com/outmanwt/dsh-team-fishbone/issues" },
+  "keywords": ["dsh-plugin", "deepseek-harness", "agents", "fishbone", "team", "visualization"],
+  "scripts": { "check": "node scripts/check.mjs", "test": "node scripts/check.mjs" },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md", "LICENSE", "NOTICE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-locale", "@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}
